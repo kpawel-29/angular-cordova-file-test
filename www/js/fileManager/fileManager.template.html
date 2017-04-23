@@ -1,0 +1,85 @@
+
+<div style="margin-top: 10px"></div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Check free space</div>
+  <div class="panel-body">
+    <div class="input-group">
+	    <input type="text" disabled="disabled" class="form-control" value="{{ $ctrl.freeSpace }}">
+		<span class="input-group-btn">
+			<button class="btn btn-default" type="button" ng-click="$ctrl.checkFreeSpace()">Check!</button>
+		</span>
+	</div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading">Create file</div>
+  <div class="panel-body">
+    <div class="input-group">
+      <input type="text" class="form-control" value="$ctrl.fileToCreate" placeholder="files" ng-model="$ctrl.fileToCreate">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="$ctrl.createFile($ctrl.fileToCreate)">Go!</button>
+      </span>
+    </div>
+    <pre>{{ $ctrl.createFileOutput }}</pre>
+  </div>
+</div>
+
+<div class="panel panel-warning">
+  <div class="panel-heading">Read file as text</div>
+  <div class="panel-body">
+    <div class="input-group">
+      <input type="text" class="form-control" value="$ctrl.fileToRead" ng-model="$ctrl.fileToRead">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="$ctrl.readFileAsText($ctrl.fileToRead)">Go!</button>
+      </span>
+    </div>
+	
+    <pre>{{ $ctrl.fileOutput }}</span>
+
+  </div>
+</div>
+
+
+<div class="panel panel-success">
+  <div class="panel-heading">Write text to file</div>
+  <div class="panel-body">
+  <input type="text" class="form-control" value="$ctrl.messageToSave" ng-model="$ctrl.messageToSave">
+    <div class="input-group">
+      <input type="text" class="form-control" value="$ctrl.fileToCreate" ng-model="$ctrl.fileToCreate" placeholder="files">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="$ctrl.writeFile($ctrl.fileToCreate, $ctrl.messageToSave)">Go!</button>
+      </span>
+    </div>
+    <pre>{{ $ctrl.writeFileOutput }}</pre>
+  </div>
+</div>
+
+<!-- 
+<div class="panel panel-info">
+  <div class="panel-heading">Check directory</div>
+  <div class="panel-body">
+    <div class="input-group">
+      <input type="text" class="form-control" value="files" placeholder="files">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="panel panel-danger">
+  <div class="panel-heading">Remove file</div>
+  <div class="panel-body">
+    <div class="input-group">
+      <input type="text" class="form-control" value="$ctrl.fileToRemove" placeholder="files" ng-model="$ctrl.fileToRemove">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="$ctrl.removeFile($ctrl.fileToRemove)">Go!</button>
+      </span>
+    </div>
+    <pre>{{ $ctrl.removeFileOutput }}</pre>
+  </div>
+</div>

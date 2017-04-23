@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "angular.cordova.file.test"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "angular.cordova.file.test"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "angular.cordova.file.test"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "angular.cordova.file.test"
+        }
+    }
+}
